@@ -51,20 +51,66 @@ int printalldivisor(int n){
     }
 }
 int smalldivisor1ton(int n){
-        int t;
-       for(int i=1;i<=n;i--){
-        t=n%i;
-        if(t==0){
-            cout<<i<<" ";
+        int sum=0;
+        while(n>0){
+       for(int i=1;i<=n;i++){
+        if(n%i==0){
+            sum +=i;
         }
      } 
+     n--;
+ } 
+ cout<<sum<<" ";
+}
+int sumalldivisor(int N){
+    int sum=0;
+    for(int i=1;i<=N;i++){
+        sum +=(N/i)*i;
+    }
+    cout<<sum<<" ";
+}
+int prime(int n){
+    for(int i=1;i<=n;i++){
+        int t=n%i;
+        if(t==0 && i%1==0 && i%n==0){
+            cout<<"prime";
+        }
+        else {
+            cout<<"No";
+        }
+      }   
+}
+int prime2(int n) {
+    // Special cases: 1 is not prime, numbers less than 1 are not prime
+    if (n <= 1) {
+        cout << "No" << endl;
+        return 0;
+    }
+    // Loop from 2 to n-1 and check if n is divisible by any number
+    for (int i = 2; i < n; i++) {
+        if (n % i == 0) {
+            cout << "No" << endl;  // Found a divisor, not prime
+            return 0;
+        }
+    }
+    cout << "Prime" << endl;  // No divisors found, n is prime
+    return 1;
+}
+int GCD(int n1,int n2){
+    int gcd=1;
+   for(int i=1;i<=n1 && i<=n2;i++){
+    if(n1%i==0 && n2%i==0){
+        gcd=i;
+    }
+   }
+   cout<<gcd<<" ";
 }
 int main(){
     int t;
     cin>>t;
     for(int i=0;i<t;i++){
-        int n;
-        cin>>n;
-        smalldivisor1ton(n);
+        int n1,n2;
+        cin>>n1>>n2;
+        GCD(n1,n2);
     }
 }
