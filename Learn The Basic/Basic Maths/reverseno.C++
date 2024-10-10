@@ -105,12 +105,19 @@ int GCD(int n1,int n2){
    }
    cout<<gcd<<" ";
 }
+int GCD2(int a,int b){
+    while(a>0 && b>0){
+        if(a>b) a=a%b;
+        else b=b%a;
+    }
+    if(a==0) return b;
+}
 int main(){
     int t;
     cin>>t;
     for(int i=0;i<t;i++){
-        int n1,n2;
-        cin>>n1>>n2;
-        GCD(n1,n2);
+        int a,b;
+        cin>>a>>b;
+        GCD2(a,b);
     }
 }
