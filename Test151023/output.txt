@@ -1,0 +1,5 @@
+Enter the pattern no. u want:33333
+32223
+32123
+32223
+33333
