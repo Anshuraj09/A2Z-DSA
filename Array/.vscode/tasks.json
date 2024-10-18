@@ -4,9 +4,9 @@
     {
       "label": "Compile and run",
       "type": "shell",
-      "command": "cmd", // Use cmd to run shell commands in Windows
+      "command": "cmd",
       "args": [
-        "/c", // Execute the command and terminate
+        "/c",
         "copy",
         "\"${file}\"",
         "${workspaceFolder}\\jspwTest.cpp",
@@ -29,7 +29,7 @@
         "jspwTest.cpp"
       ],
       "presentation": {
-        "reveal": "never"
+        "reveal": "always"
       },
       "group": {
         "kind": "build",
@@ -39,7 +39,7 @@
         "owner": "cpp",
         "fileLocation": [
           "relative",
-          "${workspaceRoot}"
+          "${workspaceFolder}"
         ],
         "pattern": {
           "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",

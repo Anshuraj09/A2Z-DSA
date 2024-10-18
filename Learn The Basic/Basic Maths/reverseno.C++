@@ -48,7 +48,7 @@ int printalldivisor(int n){
         if(t==0){
             cout<<i<<" ";
         }
-    }
+   } 
 }
 int smalldivisor1ton(int n){
         int sum=0;
@@ -69,7 +69,7 @@ int sumalldivisor(int N){
     }
     cout<<sum<<" ";
 }
-int prime(int n){
+int wrongprime(int n){
     for(int i=1;i<=n;i++){
         int t=n%i;
         if(t==0 && i%1==0 && i%n==0){
@@ -112,12 +112,27 @@ int GCD2(int a,int b){
     }
     if(a==0) return b;
 }
+int fib(int n){
+    if(n<=1) return n;
+    int t;
+    int sfirst=fib(n-1);
+    int slast=fib(n-2);
+    t=sfirst+slast;
+    return t;
+}
+int fac(int n){
+    int f=1;
+    for(int i=1;i<=n;i++){
+     f *=i;
+    }
+     cout<<f<<" ";
+}
 int main(){
     int t;
     cin>>t;
     for(int i=0;i<t;i++){
-        int a,b;
-        cin>>a>>b;
-        GCD2(a,b);
+        int n;
+        cin>>n;
+        fac(n);
     }
 }

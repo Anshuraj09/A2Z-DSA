@@ -237,7 +237,7 @@ int main(){
     for(int i=0;i<t;i++){
         int n;
         cin>>n;
-        print17(n);
+        print9(n);
     }
 }
 

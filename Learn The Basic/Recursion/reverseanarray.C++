@@ -6,12 +6,6 @@ void f(int i,int arr[],int n){
     swap(arr[i],arr[n-i-1]);
     f(i+1,arr,n);
 }
-void palindrome(char i,char arr[],char n){
-    if(i>n/2)
-    return;
-    swap(arr[i],arr[n-i-1]);
-    palindrome(i+1,arr,n);;
-}
 int main(){
     int n;
     cin>>n;
