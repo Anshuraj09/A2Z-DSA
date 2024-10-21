@@ -30,8 +30,8 @@ int main() {
         for(int i = 0; i < n; i++) {
             cin >> arr[i];
         }
-       // cin >> k;
-        leftrotate(n, arr);  // Rotate array k times
+        cin >> k;
+        leftrotate(n, arr,k);  // Rotate array k times
         for(int i = 0; i < n; i++) {
             cout << arr[i] << " ";
         }
